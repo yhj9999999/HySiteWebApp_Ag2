@@ -1,0 +1,169 @@
+<ngb-carousel class="hy_carousel_home">
+    <ng-template ngbSlide *ngFor="let slide of homeSlides | sort: 'headerId'">
+        <img src="{{ slide.imageUrl }}" alt="{{ slide.imageAlt }}" />
+        <div class="carousel-caption">
+            <h3 class="text-dark">
+                <a (click)="highLightLink(slide.linkToState)"></a
+                >{{ slide.headerText }}
+            </h3>
+            <p>
+                <a
+                    class="text-dark"
+                    (click)="highLightLink(slide.linkToState)"
+                    >{{ slide.subHeaderText }}</a
+                >
+            </p>
+        </div>
+    </ng-template>
+</ngb-carousel>
+<div class="hy_homesection">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="mt-0 mb-2">What's Trending</h1>
+            <h3 class="mb-5 font-italic font-weight-light text-muted">
+                <small>Most trending topics of the week</small>
+            </h3>
+        </div>
+        <div class="row text-center">
+            <div
+                class="col-md-4"
+                *ngFor="let highlight of homeHighLights | sort: 'highLightId'"
+            >
+                <img
+                    class="rounded-circle"
+                    src="{{ highlight.imageUrl }}"
+                    alt="{{ highlight.imageAlt }}"
+                />
+                <h4 class="my-2">{{ highlight.headerText }}</h4>
+                <p class="text-muted">{{ highlight.subHeaderText }}</p>
+                <p>
+                    <a
+                        class="btn btn-default border border-primary"
+                        (click)="highLightLink(highlight.linkToState)"
+                        >Learn more</a
+                    >
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hy_homebanner">
+    <div class="hy_text_vertical_center">
+        <h1>The World of Crowd Unfold</h1>
+    </div>
+</div>
+<div class="hy_homesection">
+    <div class="text-center">
+        <h1 class="mt-0 mb-2">What is Hycrowd</h1>
+        <h3 class="mb-5 font-italic font-weight-light text-muted">
+            <small>Welcome to Equity-based Crowdfunding</small>
+        </h3>
+    </div>
+    <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="hy_home_cf_heading_spacer_a" />
+                    <div class="clearfix"></div>
+                    <h2 class="mb-2">Our Mission, Our Platform:</h2>
+                    <p style="font-size: 21px;">All big firms started small.</p>
+                    <p style="font-size: 16px;">
+                        Today, we have the capability to invite everyone in
+                        becoming an active supporter of a startup, which was a
+                        privilege for the few. Our mission is to connect
+                        communities around the world to the spirit of
+                        entrepreneurship and the devoted individuals who put it
+                        into action.
+                    </p>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-sm-6 mt-4">
+                    <img
+                        class="img-fluid rounded"
+                        src="https://static.hycrowd.com/images/base/partner.jpeg"
+                        alt="Our Mission, Our Platform"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-5 hy_home_cf_b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 offset-lg-1 order-sm-6  col-sm-6">
+                    <hr class="hy_home_cf_heading_spacer_b" />
+                    <div class="clearfix"></div>
+                    <h2 class="mb-2">
+                        Traditional Crowdfunding vs. Equity Based Crowdfunding:
+                    </h2>
+                    <p style="font-size: 21px;">
+                        You are now a Backer, not a Customer.
+                    </p>
+                    <p style="font-size: 16px;">
+                        Instead of pre-ordering a product and participate in
+                        crowdfunding projects from the sideline, you have taken
+                        on the role of an Equity Backer. Your active
+                        participation in offering supports means you have the
+                        front seat view in the project’s journey.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-sm-6 mt-4">
+                    <img
+                        class="img-fluid rounded"
+                        src="https://static.hycrowd.com/images/base/smallbusiness.jpeg"
+                        alt="Traditional Crowdfunding vs. Equity Based Crowdfunding"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="hy_home_cf_heading_spacer_a" />
+                    <div class="clearfix"></div>
+                    <h2 class="mb-2">
+                        Grow Together:<br />Beauty of The Crowd
+                    </h2>
+                    <p style="font-size: 21px;">
+                        Support great ideas, and be part of the story together.
+                    </p>
+                    <p style="font-size: 16px;">
+                        Commit your supports responsibly and rationally when
+                        navigating through the risks (to learn more about the
+                        risks associated with crowdfunding, please click
+                        <a routerLink="/risks"><strong>here</strong></a
+                        >).
+                    </p>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-sm-6 mt-4">
+                    <img
+                        class="img-fluid rounded"
+                        src="https://static.hycrowd.com/images/base/come-together.jpeg"
+                        alt="Grow Together: Beauty of The Crowd"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hy_callout">
+    <div class="hy_text_vertical_center">
+        <h1>Let's Make History</h1>
+    </div>
+</div>
+<div class="hy_homesection">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="mt-0 mb-2">Explore Projects</h2>
+                <h3 class="mb-5 font-italic font-weight-light text-muted">
+                    <small>Your journey awaits you</small>
+                </h3>
+            </div>
+        </div>
+        <app-project-category-matrix
+            [matrixItems]="categoryMatrixItems"
+        ></app-project-category-matrix>
+    </div>
+</div>

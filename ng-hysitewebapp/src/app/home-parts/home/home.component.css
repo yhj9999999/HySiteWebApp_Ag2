@@ -1,0 +1,58 @@
+.hy_homesection {
+    padding: 10rem 0;
+}
+.carousel-caption a {
+    text-decoration: none;
+    color: white;
+}
+.hy_homebanner {
+    display: table;
+    width: 100%;
+    height: 250px;
+    color: #fff;
+    background: url(https://static.hycrowd.com/images/base/banner-bg.jpg)
+        no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.hy_callout {
+    display: table;
+    width: 100%;
+    height: 300px;
+    color: #fff;
+    background: url(https://static.hycrowd.com/images/base/callout.jpg)
+        no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.hy_text_vertical_center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.hy_home_cf_b {
+    background-color: #f8f8f8;
+}
+.hy_home_cf_heading_spacer_a {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #dedede;
+}
+.hy_home_cf_heading_spacer_b {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #cccccc;
+}
+.hy_copyright {
+    min-height: 40px;
+    background-color: #000000;
+}
+.hy_copyright p {
+    color: #fff;
+    padding: 10px 0;
+    margin-bottom: 0;
+}

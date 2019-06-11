@@ -1,0 +1,23 @@
+<div class="row">
+    <div
+        class="col-md-4 col-sm-6 hy_catecard_item"
+        *ngFor="let item of matrixItems"
+    >
+        <a routerLink="{{ item.toLink }}" class="hy_catecard_link">
+            <div class="hy_catecard_hover">
+                <div class="hy_catecard_hover_content">
+                    <i class="fa fa-search fa-3x" *ngIf="item.hoverMag"></i>
+                    <h3 *ngIf="!item.hoverMag">{{ item.hoverContent }}</h3>
+                </div>
+            </div>
+            <img
+                src="{{ item.imageSrc }}"
+                class="img-fluid"
+                alt="{{ item.captionContent }}"
+            />
+        </a>
+        <div class="hy_catecard_caption">
+            <h5>{{ item.captionContent }}</h5>
+        </div>
+    </div>
+</div>

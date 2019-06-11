@@ -1,0 +1,70 @@
+.hy_catecard_item {
+    margin: 0 0 15px;
+    right: 0;
+}
+.hy_catecard_item .hy_catecard_link {
+    display: block;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.hy_catecard_item .hy_catecard_link .hy_catecard_hover {
+    background: rgba(254, 209, 54, 0.9);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+}
+.hy_catecard_item .hy_catecard_link .hy_catecard_hover:hover {
+    opacity: 1;
+}
+.hy_catecard_item
+    .hy_catecard_link
+    .hy_catecard_hover
+    .hy_catecard_hover_content {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    top: 50%;
+    margin-top: -12px;
+    color: white;
+}
+.hy_catecard_item
+    .hy_catecard_link
+    .hy_catecard_hover
+    .hy_catecard_hover_content
+    i {
+    margin-top: -12px;
+}
+.hy_catecard_item
+    .hy_catecard_link
+    .hy_catecard_hover
+    .hy_catecard_hover_content
+    h3,
+.hy_catecard_item
+    .hy_catecard_link
+    .hy_catecard_hover
+    .hy_catecard_hover_content
+    h4 {
+    margin: 0;
+}
+.hy_catecard_item .hy_catecard_caption {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #eeeeee;
+    text-align: center;
+    padding: 25px;
+}
+.hy_catecard_item .hy_catecard_caption h5 {
+    margin: 0;
+}
+.hy_catecard_item .hy_catecard_caption p {
+    font-style: italic;
+    font-size: 16px;
+    margin: 0;
+}
