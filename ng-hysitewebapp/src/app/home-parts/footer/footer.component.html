@@ -1,0 +1,128 @@
+<footer class="hy_footer_bs">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-3 hy_footer_brand">
+                <img
+                    alt="Hycrowd"
+                    src="https://static.hycrowd.com/images/base/Logo.png"
+                    style="margin-bottom: 10px;"
+                />
+                <p>A Starting Point For Everyone</p>
+                <p><i class="fa fa-map-marker"></i> New Jersey, USA</p>
+                <p>
+                    <i class="fa fa-envelope"></i
+                    ><a href="mailto:info@hycrowd.com"> info@hycrowd.com</a>
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-3 hy_footer_nav">
+                <h4>Learn More</h4>
+                <ul class="list">
+                    <li>
+                        <a routerLink="/learn/aboutus">
+                            <small>"Hycrowd" explained</small></a
+                        >
+                    </li>
+                    <li>
+                        <a routerLink="/learn/risks">
+                            <small>Risk Consideration</small></a
+                        >
+                    </li>
+                    <li>
+                        <a routerLink="/learn/investEdu">
+                            <small>Backers' Campus</small></a
+                        >
+                    </li>
+                    <li>
+                        <a routerLink="/learn/issueEdu">
+                            <small>Pathfinders' Campus</small></a
+                        >
+                    </li>
+                    <li>
+                        <a routerLink="/learn/terms">
+                            <small>Terms & Conditions</small></a
+                        >
+                    </li>
+                    <li>
+                        <a routerLink="/learn/faq">
+                            <small>Frequently Ask Questions</small></a
+                        >
+                    </li>
+                    <li>
+                        <a routerLink="/learn/contactus">
+                            <small>Contact Hub</small></a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-3 hy_footer_social">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li>
+                        <i
+                            class="fa fa-facebook-official"
+                            aria-hidden="true"
+                        ></i
+                        ><a href="#"> <small>Facebook</small></a>
+                    </li>
+                    <li>
+                        <i class="fa fa-twitter" aria-hidden="true"></i
+                        ><a href="#"> <small>Twitter</small></a>
+                    </li>
+                    <li>
+                        <i class="fa fa-instagram" aria-hidden="true"></i
+                        ><a href="#"> <small>Instagram</small></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-3 hy_footer_ns">
+                <h4>Newsletter</h4>
+                <p>Stay posted with our newsletters</p>
+                <form
+                    #newsletterForm="ngForm"
+                    (ngSubmit)="addNewsletter()"
+                    novalidate
+                >
+                    <div class="form-group">
+                        <label class="sr-only" for="inputNewsletterEmail"
+                            >Email address</label
+                        >
+                        <div class="input-group">
+                            <input
+                                type="email"
+                                class="form-control"
+                                placeholder="abc@opq.xyz"
+                                name="inputNewsletterEmail"
+                                id="inputNewsletterEmail"
+                                [(ngModel)]="newsletterEmailAddr"
+                                #inputNewsletterEmail="ngModel"
+                                minlength="5"
+                                maxlength="100"
+                                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$"
+                                required
+                            />
+                            <span class="input-group-btn">
+                                <button
+                                    class="btn btn-default"
+                                    type="submit"
+                                    [disabled]="inputNewsletterEmail.invalid"
+                                >
+                                    <i class="fa fa-envelope"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="hy_copyright">
+    <div class="container">
+        <div class="text-center">
+            <p>
+                <i class="fa fa-copyright" aria-hidden="true"></i> hycrowd.com.
+                All rights reserved
+            </p>
+        </div>
+    </div>
+</div>

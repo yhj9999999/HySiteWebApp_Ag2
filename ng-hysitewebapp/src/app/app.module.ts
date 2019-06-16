@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { HomePartsModule } from './home-parts/home-parts.module';
 import { HomeComponent } from './home-parts/home/home.component';
 import { TitleService } from './service/title.service';
+import { AuthService } from './service/auth.service';
+import { AuthInterceptor } from './interceptor/auth-interceptor';
 
 const appRoutes: Routes = [
     {
         path: '',
         component: HomeComponent,
         pathMatch: 'full',
-        data: { title: 'Hycrowd' },
+        data: { title: 'Home' },
     },
     { path: '**', redirectTo: '/' },
 ];
@@ -29,7 +31,11 @@ const appRoutes: Routes = [
         HomePartsModule,
         RouterModule.forRoot(appRoutes),
     ],
-    providers: [TitleService],
+    providers: [
+        TitleService,
+        AuthService,
+        { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {

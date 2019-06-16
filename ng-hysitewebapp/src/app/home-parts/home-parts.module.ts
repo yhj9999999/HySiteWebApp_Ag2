@@ -6,9 +6,18 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectCategoryMatrixComponent } from './project-category-matrix/project-category-matrix.component';
+import { FooterComponent } from './footer/footer.component';
+import { GoTopButtonComponent } from './go-top-button/go-top-button.component';
+import { HeaderNavComponent } from './header-nav/header-nav.component';
 
 @NgModule({
-    declarations: [HomeComponent, ProjectCategoryMatrixComponent],
+    declarations: [
+        HomeComponent,
+        ProjectCategoryMatrixComponent,
+        FooterComponent,
+        GoTopButtonComponent,
+        HeaderNavComponent,
+    ],
     imports: [
         CommonModule,
         FormsModule,
@@ -16,5 +25,6 @@ import { ProjectCategoryMatrixComponent } from './project-category-matrix/projec
         NgbModule,
         CustomPipesModule,
     ],
+    exports: [FooterComponent, GoTopButtonComponent, HeaderNavComponent],
 })
 export class HomePartsModule {}

@@ -1,0 +1,84 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <button
+        class="navbar-toggler"
+        type="button"
+        [class.collapsed]="hideCross"
+        (click)="toggleNav()"
+    >
+        <span> </span>
+        <span> </span>
+        <span> </span>
+    </button>
+    <a class="navbar-brand" routerLink="/"
+        ><img
+            alt="Hycrowd"
+            src="https://static.hycrowd.com/images/base/Logo.png"
+    /></a>
+
+    <div class="collapse navbar-collapse" [ngbCollapse]="navCollapsed">
+        <div class="navbar-nav mr-auto">
+            <a
+                class="nav-item nav-link"
+                routerLink="/search/projectList"
+                routerLinkActive="active"
+                (click)="collapseNav()"
+                >Explore Campaigns</a
+            >
+            <a
+                class="nav-item nav-link"
+                routerLink="/learn/startProject"
+                routerLinkActive="active"
+                (click)="collapseNav()"
+                >Start Your Campaign</a
+            >
+        </div>
+        <form
+            class="form-inline mr-2"
+            #navSearchForm="ngForm"
+            (ngSubmit)="goToSearch(navSearchTerm)"
+            novalidate
+        >
+            <div class="input-group input-group-sm">
+                <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    name="inputNavSearchTerm"
+                    [(ngModel)]="navSearchTerm"
+                    #inputNavSearchTerm="ngModel"
+                    required
+                    maxlength="100"
+                    minlength="3"
+                />
+                <div class="input-group-append">
+                    <button
+                        class="btn btn-secondary"
+                        type="submit"
+                        (click)="collapseNav()"
+                        [disabled]="inputNavSearchTerm.invalid"
+                    >
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <ul class="navbar-nav">
+            <li class="nav-item" *ngIf="hideUserMenu()">
+                <a class="nav-item nav-link" (click)="goToSignin()">
+                    <i class="fa fa-user-circle-o"></i
+                    ><b class="caret"></b> Sign In/Up
+                </a>
+            </li>
+            <li class="nav-item" *ngIf="!hideUserMenu()">
+                <a class="nav-item nav-link" (click)="goToUserProfile()">
+                    {{ getUserName() }}
+                </a>
+            </li>
+            <li class="nav-item" *ngIf="!hideUserMenu()">
+                <a class="nav-item nav-link" (click)="signOut()">
+                    <i class="fa fa-user-circle-o"></i
+                    ><b class="caret"></b> Sign Out
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
